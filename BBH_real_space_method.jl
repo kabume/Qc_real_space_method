@@ -104,7 +104,7 @@ function Hamiltonian(γ, λ, δ, N;period=1)
     return H
 end
 
-γ=0.01; λ = 1; δ = 0.1; N = 10
+γ=0.01; λ = 1; δ = 0; N = 10
 E,V = eigen(Hamiltonian(γ,λ,δ, N,period=0))
 figure();plot(E,".")
 figure();imshow(reshape(real.(V[:,2N^2+5]),2N,2N))
